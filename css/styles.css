@@ -1,25 +1,25 @@
 @font-face {
-  font-family: 'Futura PT';
-  src: url('../fonts/') format('woff2'),
-      url('../fonts/subset-FuturaPT-Medium.woff') format('woff');
+  font-family: "Futura PT";
+  src: url("../fonts/") format("woff2"),
+      url("../fonts/subset-FuturaPT-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT Book';
-  src: url('../fonts/subset-FuturaPT-Book.woff2') format('woff2'),
-      url('../fonts/subset-FuturaPT-Book.woff') format('woff');
+  font-family: "Futura PT Book";
+  src: url("../fonts/subset-FuturaPT-Book.woff2") format("woff2"),
+      url("../fonts/subset-FuturaPT-Book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT';
-  src: url('../fonts/subset-FuturaPT-Bold.woff2') format('woff2'),
-      url('../fonts/subset-FuturaPT-Bold.woff') format('woff');
+  font-family: "Futura PT";
+  src: url("../fonts/subset-FuturaPT-Bold.woff2") format("woff2"),
+      url("../fonts/subset-FuturaPT-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Futura PT", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
@@ -64,19 +64,316 @@ img {
 }
 
 .container {
-  max-width: 1280px;
-  padding-left: 20px;
-  padding-right: 20px;
+    max-width: 1350px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-header {
+  position: relative;
+}
+
+.header-top {
+  background-color: #F9F8F8;
+  padding: 14px 0 10px 0;
+}
+
+.site-logo {
+  position: absolute;
+  top: 21px;
+  left: 61px;
+}
+
+.header-top__container {
+  display: flex;
+  align-items: center;
+}
+
+.header-top__address {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin:0 100px 0 128px;
+}
+
+.header-top__address::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/home-icon.svg");
+  margin-right: 9px;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.tel::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/tel-icon.svg");
+  margin-right: 9px;
+}
+
+.tel__link {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.tel-1::after,
+.tel-2::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #FFBD54;
+  background-repeat: 50%;
+  margin: 0 5px;
+}
+
+.header-top__time {
+  display: flex;
+  align-items: center;
   margin-left: auto;
-  margin-right: auto;
-  /* box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1); */
+}
+
+.time {
+  margin: 0;
+  font-size: 14px;
+}
+
+.time-1 {
+  margin-right: 17px;
+}
+
+.time__bold {
+  font-weight: 700;
+}
+
+.header-top__time::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/calendar-icon.svg");
+  margin-right: 9px;
+}
+
+.header-bottom__container {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.site-navbar {
+  margin-left: 198px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  margin: 0 25px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #F4FFAD;
+}
+
+.nav-item .active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/active.svg");
+  background-position: center center;
+  margin-right: 9px;
+}
+
+.quessions {
+  margin-left: auto;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.quessions::before {
+  content: "";
+  display: block;
+  background-image: url("../img/pet.svg");
+  background-position: center center;
+  background-size: 23px 21px;
+  width: 23px;
+  height: 21px;
+  margin-right: 9px;
+}
+
+      /* MAIN */
+
+.hero {
+  background-image: url("../img/hero.png"), url("../img/bird-izi.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 600px)  -100px,
+                       calc(50% + 750px)  75%;
+  padding: 150px 0;
+}
+
+.hero__container {
+  display: flex;
+}
+
+.hero-left {
+  flex: 1;
 }
 
 
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
 
+.hero-title {
+  font-size: 70px;
+  color: #333;
+  margin: 0;
+}
+.blue-title {
+  display: block;
+  color: #78C0DE;
+}
 
+.hero-text {
+  font-weight: normal;
+  font-size: 16px;
+  color: #949494;
+  max-width: 495px;
+  margin: 0;
+  padding: 29px 0 38px 0;
+}
 
+.hero-link {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 45px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
 
+    /* blockquote */
+
+.blockquote__container {
+  margin-bottom: 50px;
+}
+
+.blockq {
+  width: 753px;
+  text-align: center;
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: #949494;
+  font-size: 20px;
+}
+
+.blockq::before {
+  position: absolute;
+  top: -45%;
+  left: -15%;
+  content: "";
+  display: block;
+  width: 142px;
+  height: 128px;
+  background-image: url("../img/bk1.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.blockq::after {
+  position: absolute;
+  top: 45%;
+  right: -15%;
+  content: "";
+  display: block;
+  width: 142px;
+  height: 128px;
+  background-image: url("../img/bk2.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.blockq-hr {
+  border: none;
+  height: 2px;
+  background-color: #dbdbdb;
+  width: 140px;
+}
+
+.blockq-tit {
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+      /* CONTACT */
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.map {
+  position: relative;
+}
+
+.contact__vektorcha {
+  position: absolute;
+  top: -1500%;
+  left: 40%;
+}
 
 
 @media
